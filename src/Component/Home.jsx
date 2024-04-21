@@ -31,9 +31,9 @@ return(
         <li className="p-5">Karan Reddy</li>
     </ul>
     <div className='flex justify-center'>
-        <a className='font-bold hover:underline' href='https://github.com/rahulrangers/Music-Recommendation-System'>Code|</a>
-        <a className='font-bold'>Dataset|</a>
-        <a className='font-bold'>Code </a>
+        <a className='font-bold hover:underline mr-[4px]' href='https://github.com/rahulrangers/Music-Recommendation-System'>Code</a>
+        <a className='font-bold hover:underline' href='https://drive.google.com/drive/folders/1cZrxBiqRWqYuWxFkjURHziWZl0WSuJcs?usp=sharing '>| Dataset |</a>
+        <a className='font-bold hover:underline ml-[4px]' href='https://youtu.be/LdepemxdaHY'>Youtube-link</a>
     </div>
     <div className="px-28 py-5 font-bold" >"Welcome to our Music Genre Classifier and Recommendation System! This versatile tool utilizes machine learning to not only classify music genres based on various audio features but also recommend similar songs tailored to your preferences. Upload your audio file and discover its genre, as well as receive personalized recommendations based on your favorite tunes!"</div>
     <div className="text-[25px] font-bold px-28">Explanation of the purpose of the classifier & recommendation system: </div>
@@ -137,8 +137,14 @@ track:</div>
 
         
         
-<div className="text-[25px] font-bold px-28 py-5 ">Spotlight Video:</div>
-
+    <div className="text-[25px] font-bold px-28 py-5 ">Spotlight Video:</div>
+    <div className= "ml-[110px]"> 
+    <YouTube videoId="LdepemxdaHY" opts={opts} />
+    </div>
+    <div className='flex justify-center'>
+        <div className='font-bold'>Copyright © IIT Jodhpur</div>
+    </div>
+        
     </div>
 )
 }
