@@ -14,7 +14,7 @@ const FileUpload = () => {
     try {
       const formData = new FormData();
       formData.append('file', file);
-     if(Backend_URL){
+     
       const response = await fetch("https://dev.patalu.tech/upload", {
         method: 'POST',
         body: formData,
@@ -25,7 +25,7 @@ const FileUpload = () => {
 
       setGenre(data.genre);
     }
-    } catch (err) {
+     catch (err) {
       setError('File upload failed. Please try again.');
     } finally {
       setLoading(false);
