@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 
 const FileUpload = () => {
-  const { VITE_BACKEND_URL: Backend_URL } = import.meta.env;
+
   const [genre, setGenre] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -15,7 +15,7 @@ const FileUpload = () => {
       const formData = new FormData();
       formData.append('file', file);
      if(Backend_URL){
-      const response = await fetch(Backend_URL, {
+      const response = await fetch("https://dev.patalu.tech/upload", {
         method: 'POST',
         body: formData,
       });
