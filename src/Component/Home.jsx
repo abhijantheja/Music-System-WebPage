@@ -7,6 +7,7 @@ import box from "../assets/Boxplot.jpg"
 import map from "../assets/Correlation heatmap.jpg"
 import pca from "../assets/PCA.jpg"
 import tsne from "../assets/t-SNE.jpg"
+import FileUpload from './Fileupload';
 const Home=()=>{
     const opts = {
         height: '390',
@@ -38,6 +39,8 @@ return(
     <div className="px-28 py-5 font-bold" >"Welcome to our Music Genre Classifier and Recommendation System! This versatile tool utilizes machine learning to not only classify music genres based on various audio features but also recommend similar songs tailored to your preferences. Upload your audio file and discover its genre, as well as receive personalized recommendations based on your favorite tunes!"</div>
     <div className="text-[25px] font-bold px-28">Explanation of the purpose of the classifier & recommendation system: </div>
     <div className="px-28 py-5  ">Our classifier and recommendation system cater to music enthusiasts and professionals alike, offering a convenient way to identify the genre of a song and discover new music that resonates with your taste. Whether you're organizing your music library, creating playlists, or exploring new genres, our tool is here to assist you every step of the way.</div>
+    <div className='text-[25px] font-bold px-28'>"GenreGalaxy: Navigate Your Musical Universe"</div>
+    <FileUpload/>
     <div className="text-[25px] font-bold px-28">Abstract</div>
     <div className="px-28 py-5 ">The digital music landscape offers a vast array of choices, making efficient music discovery challenging. This project addresses this challenge by developing a personalized music recommendation system based solely on song names and a robust music genre classification system.
 
@@ -48,81 +51,81 @@ In contrast, our music genre classification system employs various machine learn
 Through comprehensive evaluation and user studies, we showcase the strengths of both systems. The recommendation system simplifies song discovery, while the classification system offers a structured approach to exploring music genres. Together, these systems aim to enhance user engagement and navigation within the digital music landscape.
 </div>
 <div className="text-[25px] font-bold px-28">Datasets:</div>
-<div class="px-28">GTZAN: Audio files with “.wav” format have been used.</div>
-<div class="px-28 py-1">The content of the data set:</div>
-<div class="px-28"> 
+<div className="px-28">GTZAN: Audio files with “.wav” format have been used.</div>
+<div className="px-28 py-1">The content of the data set:</div>
+<div className="px-28"> 
     <p>● Collection of 10 genres with 100 audio files each.</p>
     <p>● Each Audio file is around 30 seconds long.</p>
 </div>
-<div class="px-28 py-1">Spotify Dataset:</div>
-<div class="px-28 py-1">The Spotify Top Tracks Dataset is sourced from the
+<div className="px-28 py-1">Spotify Dataset:</div>
+<div className="px-28 py-1">The Spotify Top Tracks Dataset is sourced from the
 Spotify API, capturing top tracks by various artists.
 It encompasses a variety of musical features for each
 track:</div>
-<div class="px-28 ml-10">
+<div className="px-28 ml-10">
         <p>• track_name: Name of the track</p>
         <p>• artist_name: Artist’s name</p>
         <p>• album_name: Album name</p>
         <p>• track_id: Spotify ID</p>
         <p>• danceability, energy, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo:Audio Features</p>
 <p>• duration_ms: Track duration in ms</p></div>
-<div class="px-28"> 
+<div className="px-28"> 
     <p>● This CSV dataset contains around 180000 audio data along with 1500 songs of bollywood.</p>
 </div>
 
 <div className="text-[25px] font-bold px-28">Plots generated in music genre classfier:</div>
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center mx-auto max-w-5xl">
-    <div class="m-4 w-[500px]">
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center mx-auto max-w-5xl">
+    <div className="m-4 w-[500px]">
         <div className='px-28 py-5 font-bold ml-[50px]' >Box-plot:</div>
-        <img src={boxplot}alt="Plot 1" class="max-w-full h-auto"/>
+        <img src={boxplot}alt="Plot 1" className="max-w-full h-auto"/>
     </div>
 
-    <div class="ml-[300px] w-[300px]">
+    <div className="ml-[300px] w-[300px]">
         <div className='px-28 py-5 font-bold ' >Correlation-heatmap:</div>
-        <img src={heatmap} alt="Plot 2" class="max-w-full h-auto"/>
+        <img src={heatmap} alt="Plot 2" className="max-w-full h-auto"/>
     </div>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center mx-auto max-w-5xl">
-    <div class="m-4 w-[500px]">
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center mx-auto max-w-5xl">
+    <div className="m-4 w-[500px]">
         <div className='px-28 py-5 font-bold ml-[150px] ' >LDA:</div>
-        <img src={LDA} alt="Plot 2" class="max-w-full h-auto"/>
+        <img src={LDA} alt="Plot 2" className="max-w-full h-auto"/>
     </div>
 
-    <div class="ml-[300px] w-[400px]">
+    <div className="ml-[300px] w-[400px]">
         <div className='px-28 py-5 font-bold ml-[100px] ' >PCA:</div>
-        <img src={PCA} alt="Plot 2" class="max-w-full h-auto"/>
+        <img src={PCA} alt="Plot 2" className="max-w-full h-auto"/>
     </div>
 
     
 </div>
 <div className="text-[25px] font-bold px-28">Plots generated in music recommendation System:</div>
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center mx-auto max-w-5xl">
-    <div class="m-4 w-[500px]">
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center mx-auto max-w-5xl">
+    <div className="m-4 w-[500px]">
         <div className='px-28 py-5 font-bold ml-[50px]' >Box-plot:</div>
-        <img src={box}alt="Plot 1" class="max-w-full h-auto"/>
+        <img src={box}alt="Plot 1" className="max-w-full h-auto"/>
     </div>
 
-    <div class="ml-[350px] w-[500px]">
+    <div className="ml-[350px] w-[500px]">
         <div className='px-28 py-5 font-bold ' >Correlation-heatmap:</div>
-        <img src={map} alt="Plot 2" class="max-w-full h-auto"/>
+        <img src={map} alt="Plot 2" className="max-w-full h-auto"/>
     </div>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center mx-auto max-w-5xl">
-    <div class="w-[500px]">
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center mx-auto max-w-5xl">
+    <div className="w-[500px]">
         <div className='px-28 py-5 font-bold ml-[150px] ' >t-SNE:</div>
-        <img src={tsne} alt="Plot 2" class="max-w-full h-auto"/>
+        <img src={tsne} alt="Plot 2" className="max-w-full h-auto"/>
     </div>
 
-    <div class="ml-[350px] w-[500px]">
+    <div className="ml-[350px] w-[500px]">
         <div className='px-28 py-5 font-bold ml-[100px] ' >PCA:</div>
-        <img src={pca} alt="Plot 2" class="max-w-full h-auto"/>
+        <img src={pca} alt="Plot 2" className="max-w-full h-auto"/>
     </div>
 
     
 </div>
 
 <div className="text-[25px] font-bold px-28 py-5 ">"Explore Our Resources":</div>
-<div class='w-10px'>
+<div className='w-10px'>
     <div>
         <a className='ml-[200px] font-bold  hover:underline' href='https://www.kaggle.com/code/vatsalmavani/music-recommendation-system-using-spotify-dataset/notebook'>1) Kaggle-Music Recommendation</a>
     </div>
@@ -142,7 +145,7 @@ track:</div>
     <YouTube videoId="LdepemxdaHY" opts={opts} />
     </div>
     <div className='flex justify-center'>
-        <div className='font-bold'>Copyright © IIT Jodhpur</div>
+        <div className='font-bold text-[20px] m-[10px]'>Copyright © IIT Jodhpur</div>
     </div>
         
     </div>
